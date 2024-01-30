@@ -1,3 +1,5 @@
 ## Projet_AuTempsDonne
-Daniela Mfaboum la bosssssss
+Daniela Mfaboum
+Sebastien Liu
+Camille (Ulysse) Bard
 
