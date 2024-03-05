@@ -133,8 +133,8 @@ class userController {
         {
             $id=get_id($obj);
             $this->open_db();
-            $query=$this->condb->prepare("SELECT * FROM users WHERE id=?");
-            $query->bind_param("i",$id);
+            $query=$this->condb->prepare("SELECT * FROM users WHERE email=?");
+            $query->bind_param("s",$email);
             $query->execute();
             $res=$query->get_result();
             $query->close();
