@@ -3,13 +3,15 @@ version: '3.8'
 services:
   mariadb:
     image: bitnami/mariadb:latest
+    restart: always
+    ports:
+      - "33061:3306"
     environment:
       MARIADB_ROOT_PASSWORD: root
       MARIADB_DATABASE: mydb13
-      #MARIADB_USER: root
-      MARIADB_ALLOW_EMPTY_PASSWORD: 'yes'
+      MARIADB_PASSWORD: 'root'
     volumes:
-      - ./mariadb_data:/bitnami/mariadb
+      - ./create_tables.sql:/docker-entrypoint-initdb.d/create_tables.sql
     networks:
       - default
 

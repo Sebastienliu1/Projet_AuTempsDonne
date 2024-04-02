@@ -14,4 +14,4 @@ class User {
         $this->surname = $surname;
         $this->type = $type;
     }
-} ?>
+}
