@@ -1,5 +1,5 @@
 <?php
-class config
+class Config
 {
     public $host;
     public $user;

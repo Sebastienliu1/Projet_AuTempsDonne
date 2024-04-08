@@ -12,6 +12,8 @@ class userController {
         $this->userModel = new userModel(new config());
     }
 
+    
+
     public function userHandler($obj) {
         // Récupérer l'action de l'utilisateur depuis la requête
         $action = isset($_SERVER['REQUEST_METHOD']) ? $_SERVER['REQUEST_METHOD'] : 'default';

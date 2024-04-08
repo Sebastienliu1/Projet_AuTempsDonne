@@ -1,6 +1,5 @@
 <?php
-include_once 'controllers/userController.php';
-require_once 'config.php';
+include_once 'controllers/uController.php';
 // Skipper les warnings, pour la production (vos exceptions devront être gérées proprement)
 error_reporting(E_ERROR | E_PARSE);
 
@@ -24,10 +23,14 @@ if (empty($uri[count($uri) - 1])) {
 }
 
 print_r($uri);
+
+$post = json_encode($_POST); 
+print_r($post); // to be deleted when proper front will be there
+
 switch ($uri[count($uri) - 1]) {
     case 'users':
         $controller = new userController();
-        $controller->userHandler($_SERVER['REQUEST_METHOD']);
+        $controller->userHandler($post);
         break;
     default:
         echo("error of uri");
